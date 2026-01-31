@@ -69,6 +69,13 @@ TEMPLATES = [
     },
 ]
 
+STATIC_URL = '/static/'
+
+# Optional but recommended for project-level static
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
+
 WSGI_APPLICATION = 'Fayyaz_Shah_Prima.wsgi.application'
 
 

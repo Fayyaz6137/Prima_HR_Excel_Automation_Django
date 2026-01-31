@@ -1,42 +1,50 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Prima Excel Automation By Fayyaz - History</title>
+    <title>Upload History</title>
+    <link rel="stylesheet" href="{% static 'Fayyaz_Prima_Excel_Automate/css/history_dark.css' %}">
 </head>
 <body>
-<h2>Upload History</h2>
 
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Uploaded File</th>
-        <th>Status</th>
-        <th>Date</th>
-    </tr>
+<div class="container">
+    <h2>
+        📁 Upload History
+        <a href="/">⬅ Back</a>
+    </h2>
 
-    {% for e in executions %}
-    <tr>
-        <td>{{ e.id }}</td>
-        <td>
-            {% if e.output_file %}
-            <a href="{{ e.output_file.url }}">Output</a>
-            {% else %}
-            Error
-            {% endif %}
-        </td>
-        <td>{{ e.status }}</td>
-        <td>{{ e.created_at }}</td>
-    </tr>
-    {% empty %}
-    <tr>
-        <td colspan="4">No uploads yet</td>
-    </tr>
-    {% endfor %}
-</table>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Output</th>
+            <th>Status</th>
+            <th>Date</th>
+        </tr>
 
-<a href="/">Back</a>
+        {% for e in executions %}
+        <tr>
+            <td>#{{ e.id }}</td>
+            <td>
+                {% if e.output_file %}
+                    <a class="btn-download" href="{{ e.output_file.url }}">⬇ Download</a>
+                {% endif %}
+            </td>
+            <td><span class="status {{ e.status }}">{{ e.status }}</span></td>
+            <td>{{ e.created_at|date:"Y-m-d H:i" }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4" style="text-align:center;color:#64748b;">
+                No uploads yet 🚀
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
 
+    <div class="footer">
+        <a href="/">➕ Upload New File</a>
+    </div>
+</div>
 
 </body>
 </html>

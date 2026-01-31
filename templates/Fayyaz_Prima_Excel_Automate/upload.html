@@ -1,23 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Prima Excel Automation By Fayyaz</title>
+    <title>Prima Excel Automation</title>
+    <link rel="stylesheet" href="{% static 'Fayyaz_Prima_Excel_Automate/css/upload_dark.css' %}">
 </head>
 <body>
-<h2>Upload CSV</h2>
 
-<form method="post" enctype="multipart/form-data" >
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Process</button>
-</form>
+<div class="card">
+    <h2>📊 Prima Excel Automation</h2>
+    <p class="subtitle">Upload CSV or Excel</p>
 
-{% if message %}
-<p>{{ message }}</p>
-{% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">🚀 Process File</button>
+    </form>
 
-<a href="/history/">Go to History</a>
+    <div class="footer-link">
+        <a href="/history/">📁 View History</a>
+    </div>
+</div>
 
 </body>
 </html>
