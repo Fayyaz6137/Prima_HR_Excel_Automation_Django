@@ -57,5 +57,13 @@ The application was built incrementally to ensure clarity, correctness, and test
 
 ---
 
+## ⚙️ Important
+
+- **After making app model changes**: python manage.py makemigrations Fayyaz_Prima_Excel_Automate
+- **After making project models changes**: python manage.py makemigrations
+- **Applying Migrations**: **python manage.py migrate**
+
+
+---
 
 
