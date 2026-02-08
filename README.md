@@ -35,7 +35,7 @@ git clone [https://github.com/Fayyaz6137/Ping_Pong_Game_Python.git](https://gith
 
 pip install -r requirements.txt
 
-python manage.py migrate -->Only if running for the first time
+python manage.py migrate --> Only if running for the first time
 
 python manage.py runserver
 ```
