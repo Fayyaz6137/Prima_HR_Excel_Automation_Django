@@ -28,7 +28,7 @@ The application accepts **CSV input files**, applies the same calculation logic 
 
 ---
 
-## ▶️ Run Locally (Recommended)
+## ▶️ Run Locally
 
 ```bash
 git clone [https://github.com/Fayyaz6137/Ping_Pong_Game_Python.git](https://github.com/Fayyaz6137/Prima_HR_Excel_Automation_Django.git)
@@ -47,7 +47,6 @@ python manage.py runserver
 ```bash
 docker compose up --build
 ```
-⚠️ Since this is a GUI application, running inside Docker requires an X server (e.g., VcXsrv on Windows).
 
 ---
 
