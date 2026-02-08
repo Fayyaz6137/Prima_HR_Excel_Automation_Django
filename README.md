@@ -18,6 +18,21 @@ The application accepts **CSV input files**, applies the same calculation logic 
 
 ---
 
+## ⚙️ Tech Stack
+
+- **Python**
+- **Django**
+- **Pandas** (CSV processing)
+- **HTML (Django Templates)**
+- **CSS (Django Statics)**
+
+---
+
+## ▶️ To Run
+Go to the working directory where docker file is and type: **docker compose up --build**
+
+---
+
 ## 🧠 Development Approach (Phased)
 
 The application was built incrementally to ensure clarity, correctness, and testability.
@@ -42,29 +57,5 @@ The application was built incrementally to ensure clarity, correctness, and test
 - Output CSV generated and stored
 - Execution status and row counts recorded
 
----
-
-
----
-
-## ⚙️ Tech Stack
-
-- **Python**
-- **Django**
-- **Pandas** (CSV processing)
-- **HTML (Django Templates)**
-- **CSS (Django Statics)**
-
----
-
-## ⚙️ Important
-
-- **Applying Migrations after Cloning to create Database**: **python manage.py migrate**
-- **After making app model changes**: python manage.py makemigrations Fayyaz_Prima_Excel_Automate
-- **After making project models changes**: python manage.py makemigrations
-
-
-
----
 
 
