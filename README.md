@@ -55,6 +55,7 @@ docker compose up --build
 
 ![History](https://github.com/user-attachments/assets/278d8045-2244-446d-9896-4af74e4d9694)
 
+---
 
 ## 🧠 Development Approach (Phased)
 
